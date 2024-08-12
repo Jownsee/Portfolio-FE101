@@ -1,0 +1,157 @@
+/* Base styles */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Sidebar styling */
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 18vw;
+    background-color: #7c8994;
+    position: fixed;
+    height: 100vh;
+    overflow: auto;
+    text-align: center;
+    z-index: 1;
+}
+
+.sidebar a {
+    display: block;
+    color: black;
+    padding: 1rem;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    background-color: #4f728b;
+    color: antiquewhite;
+    border-top-right-radius: 10%;
+    border-bottom-right-radius: 10%;
+}
+
+.sidebar a.active {
+    background-color: #405d72;
+    color: antiquewhite;
+    border-top-left-radius: 10%;
+    border-bottom-left-radius: 10%;
+}
+
+h2 {
+    font-size: 2rem; 
+    color: #cccccc;                  
+    margin-top: 2.5rem; 
+    margin-bottom: 1.3rem; 
+    padding: 1rem; 
+    text-align: center;               
+    background-color: #405d72;        
+    border-bottom: 2px solid black; 
+    border-radius: 10px;
+    position: relative;               
+    z-index: 1;                       
+}
+
+/* Content area */
+.content {
+    position: relative; 
+    margin-left: 18vw;
+    padding: 2rem;
+    background-color: #405d72;
+}
+
+/* Gallery grid layout */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); 
+    gap: 1rem; 
+    margin-top: 1rem; 
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 5%;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer styling */
+footer {
+    background-color: #7c8994;
+    color: black;
+    padding: 1rem; 
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+footer a {
+    color: #121212;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #e3ebf2;
+    text-decoration: none;
+}
+
+/* Media Query Responsiveness */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+    }
+
+    .sidebar a {
+        flex: 1;
+        padding: 0.5rem;
+    }
+
+    .content {
+        margin-left: 0;
+        padding-top: 1rem;
+    }
+
+    .gallery {
+         grid-template-columns: repeat(2, 1fr);
+         gap: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr; 
+        gap: 0.5rem; 
+    }
+
+
+    .content {
+        margin-left: 0;
+        padding: 0.5rem;
+    }
+
+    footer {
+        padding: 0.5rem; 
+    }
+}
+
+/*Clearfix for floating elements */
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}

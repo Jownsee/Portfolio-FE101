@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IONE Contact</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+    <div class="sidebar">
+        <h1>IONE</h1>
+        <nav>
+            <a href="index.html">GALLERY</a>
+            <a href="bio.html">BIO</a>
+            <a href="projects.html">PROJECTS</a>
+            <a href="shop.html">SHOP</a>
+            <a href="contact.html" class="active">CONTACT</a>
+        </nav>
+    </div>
+
+    <div class="content">
+        <main>
+            <h2>Get In Touch!</h2>
+
+            <br>
+            <br>
+            <br>
+
+            <section class="contact-section">
+                <div class="contact-image">
+                    <img src="Artworks\27.png" alt="Artwork27">
+                </div>
+
+                <div class="contact-form">
+                    <form action="/submit-form" method="post" onsubmit="return confirmSubmission()">
+                        <fieldset>
+                            <legend>Email Us!</legend>
+                
+                            <label for="name">Full Name:</label>
+                            <input type="text" id="name" name="name" required>
+                
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                
+                            <label for="subject">Subject:</label>
+                            <input type="text" id="subject" name="subject">
+                
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                
+                            <button type="submit">SEND</button>
+                        </fieldset>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        function confirmSubmission() {
+            return confirm("Are you sure you want to send this message?");
+        }
+    </script>
+
+    <footer>
+        <p>&copy; IONE Studio 2024 &nbsp; | &nbsp; 
+            <a href="mailto:your-email@example.com">Gmail</a> &nbsp; | &nbsp;
+            <a href="https://www.instagram.com/ionesome__" target="_blank">Instagram</a>
+        </p>
+    </footer>
+    
+</body>
+</html>
