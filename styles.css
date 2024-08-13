@@ -41,14 +41,30 @@ body {
     border-bottom-left-radius: 10%;
 }
 
+h2 {
+    font-size: 2rem; 
+    color: #cccccc;                  
+    margin-top: 2.5rem; 
+    margin-bottom: 1.5rem; 
+    padding: 1rem; 
+    text-align: center;               
+    background-color: #405d72;        
+    border-bottom: 2px solid black; 
+    border-radius: 10px;
+    position: relative;               
+    z-index: 1;                       
+}
+
 /* Content area */
 .content {
+    positive: relative;
     margin-left: 18vw;
     padding: 2rem;
     background-color: #405d72;
     flex: 1; /* Make content flex to fill available space */
     box-sizing: border-box;
 }
+
 
 /* Gallery grid layout */
 .gallery {
