@@ -1,6 +1,7 @@
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scroll on small screens */
 }
 
 /* Side Navbar styling */
@@ -42,6 +43,7 @@ body {
     margin-left: 18vw; 
     padding: 2rem; 
     background-color: #405d72;
+    overflow: hidden; /* Prevent content overflow */
 }
 
 /* Main-content styling */
@@ -115,6 +117,8 @@ article {
     margin-top: 2rem;
     justify-content: center;
     padding-bottom: 5rem; 
+    width: 100%; /* Ensure gallery doesn't overflow */
+    box-sizing: border-box; /* Include padding and borders in the element’s total width and height */
 }
 
 /* Art Item Styling */
@@ -127,6 +131,8 @@ article {
     border-radius: 5px;
     padding: 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%; /* Ensure items don't overflow */
+    box-sizing: border-box; /* Include padding and borders in the element’s total width and height */
 }
 
 .art-item img {
@@ -261,7 +267,7 @@ footer {
         padding-top: 1rem;
     }
 
-    .gallery {
+    .gallery, .gallery2 {
         grid-template-columns: repeat(2, 1fr);
         gap: 0.5rem;
     }
@@ -278,7 +284,7 @@ footer {
         padding: 0.5rem;
     }
 
-    .gallery {
+    .gallery, .gallery2 {
         grid-template-columns: 1fr; 
         gap: 0.75rem;
     }
@@ -328,4 +334,4 @@ footer {
     content: "";
     display: table;
     clear: both;
-    }
+}
